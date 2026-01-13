@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  scroll-behavior: smooth;
+  font-style: normal;
+}
+#root {
+  background: #09010E;
+}
+
+.longer {
+  width: clamp(820px, 100%, 1200px) !important;
+}
+
+.course {
+  background: linear-gradient(180deg, #F7B60335, #09010E19);
+  border: 2px solid #F7B60355;
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  width: clamp(400px, 30%, 600px);
+}
+#main {
+  padding: 25px;
+}
+
+.heading {
+  font-family: Orbitron;
+  font-size: 32px;
+  color: white;
+  margin: 0px 0px;
+  padding: 25px 0px;
+}
+.course h1 {
+  font-family: Orbitron;
+  font-size: 28px;
+  padding-bottom: 8px;
+}
+
+.course h3 span, .course h3 {
+  font-family: Inter;
+  font-weight: bolder;
+  font-size: 18px;
+  padding-bottom: 0px;
+  margin-bottom: 5px;
+  margin-right:10px;
+}
+
+.course h3 span:nth-child(2) {
+  margin-left: 10px !important;
+}
+
+.course a {
+  color: white;
+  margin: 20px 0px;
+}
+
+.course a:visited {
+  color: #F7B60355;
+}
+
+.course a:active, .course a:hover {
+  color: #fc7217;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.customWidth {
+  width: clamp(820px, 100%, 1200px) !important;
+  aspect-ratio: 16/9;
+}
+.car img { 
+  aspect-ratio: 16/9;
+  object-fit: fit;
+  object-position: center;
+  border-radius: 15px;
+}
+
+.text {
+  width: clamp(100px, 100%, 600px);
+  margin: auto;
+  padding: 10px;
+  background: #00000099;
+}
+
+.custom-carousel-arrows .carousel-control-next-icon,
+.custom-carousel-arrows .carousel-control-prev-icon {
+  filter: invert(100%);
+  width: 5vw;
+  height: 5vw;
+}
+
+.skills {
+  font-weight: bold;
+}
+
+#application {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  grid-template-areas: "nav main";
+  grid-template-rows: 1fr;
+  grid-template-columns: 350px 1fr;
+  gap: 15px
+}
+
+#main {
+  grid-area: main;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.nav {
+  grid-area: nav;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 25px;
+}
+
+.nav a {
+  color: white;
+  font-family: Orbitron;
+  font-size: 24px;
+  padding-bottom: 0px;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+#git {
+  color: white;
+  text-decoration: none;
+  font-family: Orbitron;
+  font-size: 32px;
+  color: white;
+  margin: 25px 0px;
+  padding: 0x 0px;
+  transition: 0.5 ease-in;
+}
+
+.nav div {
+  display: flex;
+  width: 75%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+}
+.nav div .el {
+  color: white;
+  border: 1px solid #F7B60377;
+  padding: 5px;
+  border-radius: 3px;
+  text-align: center;
+  background: linear-gradient(45deg, #F7B60333, #C64C8533, #C64C8536);
+}
+
+#git:hover {
+  color:#F7B603;
+}
+
+.nav a:hover, .nav .selected {
+ background-image: linear-gradient(90deg, #F7B603, #C64C85);
+ background-repeat: no-repeat;
+ background-position-y: bottom;
+ background-size:100% 10%;
+ width:fit-content;
+}
+
+#resume {
+  text-decoration: none;
+  padding: 5px;
+  transition: all 1s ease;
+  border-radius: 5px;
+  background-size: 0% 0%;
+  background: linear-gradient(90deg, #F7B60300, #C64C8500);
+  color:white;
+  transition: all 0.5s ease-out;
+}
+
+#resume:hover {
+  background: linear-gradient(90deg, #F7B603, #C64C85);
+  color: black;
+}
