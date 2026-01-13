@@ -77,7 +77,7 @@ function App() {
       <a href="#clubs"  onClick={addClass} id="acl">Clubs</a>
       <a href="#course"  onClick={addClass} id="ac">Courses</a>
       <a href="#cert"   onClick={addClass} id="ace">Certificates</a>
-      <a href="./src/assets/vidya_vuyyuru_resume.pdf" target="_blank" id="resume">View Resume</a>
+      <a href="/Portfolio/vidya_vuyyuru_resume.pdf" target="_blank" id="resume">View Resume</a>
       <div>
         <span className="el">React</span>
         <span className="el">HTML</span>
