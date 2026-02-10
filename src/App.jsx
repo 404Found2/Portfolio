@@ -41,7 +41,7 @@ let exp = [
     name: "Computer Consultant I",
     time: "Jan 2026 - Present",
     place: "University of Michigan - Ann Arbor",
-    preview: `Maintained school devices, performing routine checks and updating workflows. Collaborated to ensure proper handling of dorm and classroom equipment.`,
+    preview: `Maintained school devices, performing routine checks and updating workflows; Collaborated to ensure proper handling of dorm and classroom equipment. Implemented basic troubleshooting, passing technical details to superiors as needed.`,
   },
   {
     name: "High Tech Intership",

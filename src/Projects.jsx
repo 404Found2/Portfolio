@@ -25,6 +25,15 @@ export default function Project() {
         </Carousel.Caption>
          </a>
       </Carousel.Item>
+      <Carousel.Item>
+        <a href="https://github.com/404Found2/Connections" target='_blank'>
+        <img src="/Portfolio/connections.png" className="d-block w-100"/>
+        <Carousel.Caption className="text">
+          <h3>Connections</h3>
+          <p><span className="skills">Tech-Stack: Node.Js, EJS, CSS</span> <br/> This web application acts as a personal career coach by using Ollama's AI to provide instant, actionable feedback on your interview performance and speaking habits. </p>
+        </Carousel.Caption>
+         </a>
+      </Carousel.Item>
     </Carousel> </div>
     )
 }
