@@ -1,9 +1,33 @@
 export default function Course({obj, item}) {
-    return (
+    if(obj === "empty") {
+        return (
+         <div className="course longer">
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+        </div>
+        )
+    }
+
+    if(item == "class") {
+        return (
+        <div className="course longer">
+            <h1>{obj.name}</h1>
+            <h3><span>{obj.time}</span> | <span> { "Grade: " + obj.grade} </span> <br/> <span> {"Skills: " + obj.skills}</span></h3>
+            <p>{obj.preview}</p>
+        </div>
+        )
+    } else {
+        return (
         <div className="course">
             <h1>{obj.name}</h1>
-            <h3><span>{obj.time}</span> | <span> {item == "class" ? "Grade: " + obj.grade :  ""+obj.place} </span> <br/> <span> {item == "class" ? "Skills " + obj.skills : "" + obj.leadership}</span></h3>
+            <h3><span>{obj.time}</span> | <span> { ""+obj.place} </span> <br/> <span> { "" + obj.leadership}</span></h3>
             <p>{obj.preview}</p>
         </div>
     )
 }
+    }
+    

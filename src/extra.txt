@@ -1,0 +1,10 @@
+<div className="flex">
+      <Course  id="course1" obj={courses[(courseState * 3)]} item="class"/>
+      <Course  id="course2" obj={courses[(courseState * 3) + 1]} item="class"/>
+      <Course  id="course3" obj={courses[(courseState * 3) + 2]} item="class"/>
+    </div>
+    <div className="CaroBar heading flex"> 
+      <div  onClick={ changeSlides} className={courseState === 0 ? "caro-nav selected" : "caro-nav"}> 1 </div> 
+      <div  onClick={ changeSlides} cclassName={courseState === 1 ? "caro-nav selected" : "caro-nav"}> 2 </div> 
+      <div  onClick={ changeSlides} className={courseState === 2 ? "caro-nav selected" : "caro-nav"}> 3 </div> 
+    </div>

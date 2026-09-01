@@ -1,4 +1,5 @@
 import './App.css'
+import { useState } from 'react'
 import Course from './Course.jsx'
 import Job from './Job.jsx'
 import Project from './Projects.jsx'
@@ -7,16 +8,44 @@ import Clubs from './Clubs.jsx'
 
 let courses = [
   {
+    name: "EECS 388: Introduction to Cybersecurity",
+    time: "Fall 2026", 
+    grade: "--", 
+    skills: "Linux, Ethical Hacking",
+    preview: "EECS 388 teaches the security mindset and introduces the principles and practices of computer security as applied to software, host systems, and networks. It covers the foundations of building, using, and managing secure systems. Topics include standard cryptographic functions and protocols, threats and defenses for real-world systems, computer forensics, information privacy, and AI security.",
+  },
+  {
+    name: "EECS 485: Web Systems",
+    time: "Fall 2026", 
+    grade: "--", 
+    skills: "Python, Flask, React",
+    preview: "EECS 281 teaches essential data structures (like trees, graphs, hash tables) and algorithms (like search, sort, dynamic programming), analyzing their efficiency (Big O) to build foundational problem-solving skills in computer science, applied through challenging projects.",
+  },
+  {
+    name: "MO 302: Positively Leading People and Organizations",
+    time: "Fall 2026", 
+    grade: "--", 
+    skills: "Leadership, Decision Making, Agentic AI",
+    preview: "MO 302 teaches how individuals and teams function within organizations, focusing on team dynamics, organizational structure, and AI-driven decision-making. Students understand how to design effective workflows, lead high-performing teams, and leverage agentic AI to achieve organizational goals.",
+  },
+  {
+    name: "DATASCI 101: Introduction to Datascience",
+    time: "Fall 2026", 
+    grade: "--", 
+    skills: "Linux, Python + Libraries(MatPltLib, Pandas, etc), Ethical Hacking",
+    preview: "DataSci 101 teaches how to use data to learn about the world by bridging theoretical probability and inference to practical machine learning methods, sampling distributions, and non-parametric techniques. Students complete hands-on Python projects to perform data-driven analysis.",
+  },
+  {
     name: "EECS 281: Data Structures and Algorithms",
     time: "Winter 2026", 
-    grade: "--", 
+    grade: "A-", 
     skills: "C++, Data Structures",
     preview: "EECS 281 teaches essential data structures (like trees, graphs, hash tables) and algorithms (like search, sort, dynamic programming), analyzing their efficiency (Big O) to build foundational problem-solving skills in computer science, applied through challenging projects.",
   },
   {
     name: "EECS 370: Intro to Computer Organization",
     time: "Winter 2026", 
-    grade: "--", 
+    grade: "A", 
     skills: "C, Assembly",
     preview: "EECS 370 teaches how computers execute programs by bridging high-level code to low-level hardware, focusing on processor architecture, assembly language, and basic digital logic through design and simulation. Students build simple computers and simulators to understand the fundamental relationship between hardware and software. ",
   },
@@ -51,7 +80,10 @@ let exp = [
   }
 ];
 
- 
+function App() {
+
+  const [courseState, setCourses] = useState(0);
+   
 function reset() {
   document.getElementById("aa").classList.remove("selected");
   document.getElementById("ae").classList.remove("selected");
@@ -59,16 +91,33 @@ function reset() {
   document.getElementById("ac").classList.remove("selected");
   document.getElementById("ace").classList.remove("selected");
   document.getElementById("acl").classList.remove("selected");
+
+  document.querySelectorAll(".caro-nav").forEach( (element, index) => {
+    element.classList.remove("selected");
+  });
 }
+
+function onRefresh() {
+  reset();
+  setCourses((key.target.innerText - 1));
+}
+
 function addClass(key) {
   reset();
   key.target.classList.add("selected");
   console.log(key.target);
 } 
 
-function App() {
+function changeSlides(key) {
+    reset();
+    key.target.classList.add("selected");
+    console.log(key.target);
+
+    setCourses((0));
+  } 
+
   return (
-    <div id="application">
+    <div id="application" onReload={onRefresh}>
     <div className="nav">
       <h1 className="heading">Vidya Vuyyuru</h1>
       <a href="#about" id="aa" onClick={addClass}>About</a>
@@ -83,8 +132,10 @@ function App() {
         <span className="el">HTML</span>
         <span className="el">CSS</span> <br/>
         <span className="el">Javascript</span>
+        <span className="el">Python</span>
         <span className="el">C++</span>
         </div>
+
     </div>
     <div id="main">
       <h1 className="heading" id="about">About Me</h1>
@@ -98,7 +149,16 @@ function App() {
     <Project></Project>
     <Clubs />
     <h1 className="heading" id="course">Courses</h1>
-    <div className="flex">{courses.map((item) => <Course obj={item} item="class"/>)}</div>
+    <div className="flex">
+      <Course  id="course1" obj={courses[(courseState * 3)]} item="class"/>
+      <Course  id="course2" obj={courses[(courseState * 3) + 1]} item="class"/>
+      <Course  id="course3" obj={courses[(courseState * 3) + 2] || "empty"} item="class"/>
+    </div>
+    <div className="CaroBar heading flex"> 
+      <div  onClick={ changeSlides} className={courseState === 0 ? "caro-nav selected" : "caro-nav"}> 1 </div> 
+      <div  onClick={ changeSlides} className={courseState === 1 ? "caro-nav selected" : "caro-nav"}> 2 </div> 
+      <div  onClick={ changeSlides} className={courseState === 2 ? "caro-nav selected" : "caro-nav"}> 3 </div> 
+    </div>
     <h1 className="heading" id="cert">Certificates</h1>
     <Cert/>
     </div>
