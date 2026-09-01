@@ -100,6 +100,7 @@ function reset() {
 function onRefresh() {
   reset();
   setCourses((key.target.innerText - 1));
+  setCourses((0));
 }
 
 function addClass(key) {
@@ -112,8 +113,7 @@ function changeSlides(key) {
     reset();
     key.target.classList.add("selected");
     console.log(key.target);
-
-    setCourses((0));
+    setCourses((key.target.innerText - 1));
   } 
 
   return (
