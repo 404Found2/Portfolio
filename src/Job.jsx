@@ -3,7 +3,9 @@ export default function Job({obj}) {
         <div className="course longer">
             <h1>{obj.name}</h1>
             <h3>{obj.time} | {obj.place}</h3>
-            <p>{obj.preview}</p>
+            <p><ul>
+                {obj.preview.map((it) => <li>{it}</li>)}
+                </ul></p>
         </div>
     )
 }

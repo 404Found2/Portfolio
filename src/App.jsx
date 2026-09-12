@@ -10,58 +10,74 @@ let courses = [
   {
     name: "EECS 388: Introduction to Cybersecurity",
     time: "Fall 2026", 
-    grade: "--", 
+    grade: "In Progress", 
     skills: "Linux, Ethical Hacking",
-    preview: "EECS 388 teaches the security mindset and introduces the principles and practices of computer security as applied to software, host systems, and networks. It covers the foundations of building, using, and managing secure systems. Topics include standard cryptographic functions and protocols, threats and defenses for real-world systems, computer forensics, information privacy, and AI security.",
+    preview: ["AppSec & Low-Level Exploitation: Built and tested automated Python exploit scripts targeting C binaries inside Docker/Linux VMs, disassembling binaries via GDB to execute stack-based buffer overflows, shellcode payload execution, and ROP chains against memory protection mechanisms.",
+              "Applied Cryptography: Engineered custom cryptanalytic scripts in Python to exploit vulnerable primitives, executing hash length-extension attacks, fastcoll MD5 collision generation, padding oracle message decryption, and Bleichenbacher’s RSA signature forgery.",
+              "Web & Network Security Analysis: Performed dynamic security analysis across web applications and network protocols, identifying and patching SQL injection, XSS, and CSRF vulnerabilities while evaluating socket-level traffic to mitigate Man-in-the-Middle (MITM) threats."],
   },
   {
     name: "EECS 485: Web Systems",
     time: "Fall 2026", 
-    grade: "--", 
+    grade: "In Progress", 
     skills: "Python, Flask, React",
-    preview: "EECS 281 teaches essential data structures (like trees, graphs, hash tables) and algorithms (like search, sort, dynamic programming), analyzing their efficiency (Big O) to build foundational problem-solving skills in computer science, applied through challenging projects.",
+    preview: ["Full-Stack Architecture & Web Security via a ChatGPT Clone: Built Flask and React web applications utilizing client-server decoupling, state management, and cryptographic security (PBKDF2/SHA-256) to secure persistent user sessions against web vulnerabilities.",
+              "Distributed Computing & Fault Tolerance: Architected a multi-node MapReduce engine in Python based on Google File System (GFS) specs, applying distributed systems orchestration and thread scheduling to parallelize data processing across networked nodes.",
+              "Information Retrieval & Concurrency via a Google Search Engine Clone: Developed a scalable search engine incorporating PageRank, tf-idf scoring, and multithreaded inverted index servers to master data indexing and high-throughput concurrent query processing."],
   },
   {
     name: "MO 302: Positively Leading People and Organizations",
     time: "Fall 2026", 
-    grade: "--", 
+    grade: "In Progress", 
     skills: "Leadership, Decision Making, Agentic AI",
-    preview: "MO 302 teaches how individuals and teams function within organizations, focusing on team dynamics, organizational structure, and AI-driven decision-making. Students understand how to design effective workflows, lead high-performing teams, and leverage agentic AI to achieve organizational goals.",
-  },
-  {
-    name: "DATASCI 101: Introduction to Datascience",
-    time: "Fall 2026", 
-    grade: "--", 
-    skills: "Linux, Python + Libraries(MatPltLib, Pandas, etc), Ethical Hacking",
-    preview: "DataSci 101 teaches how to use data to learn about the world by bridging theoretical probability and inference to practical machine learning methods, sampling distributions, and non-parametric techniques. Students complete hands-on Python projects to perform data-driven analysis.",
+    preview: ["Cross-Functional Team Leadership & Protocol Design: Directed high-performing teams through experiential projects, designing structured communication protocols, accountability frameworks, and workflow procedures to optimize collaborative output.",
+              "Organizational Dynamics & Culture Analysis: Evaluated corporate structures, culture frameworks, and decision-making biases to diagnose organizational bottlenecks and design context-appropriate team architectures.",
+              "AI-Augmented Workflow Automation: Integrated artificial intelligence tools and foundational AI agents into individual and group problem-solving pipelines to accelerate decision-making, automate tasks, and augment creative execution."],
   },
   {
     name: "EECS 281: Data Structures and Algorithms",
     time: "Winter 2026", 
     grade: "A-", 
     skills: "C++, Data Structures",
-    preview: "EECS 281 teaches essential data structures (like trees, graphs, hash tables) and algorithms (like search, sort, dynamic programming), analyzing their efficiency (Big O) to build foundational problem-solving skills in computer science, applied through challenging projects.",
+    preview: ["Advanced Graph Traversal & Search: Developed robust pathfinding and puzzle-solving engines in C++ utilizing Breadth-First Search (BFS), Depth-First Search (DFS), and heuristic route-tracing for complex 2D/3D environments.",
+      "Priority Queues & Resource Management: Engineered high-performance simulation systems (e.g., tower defense and stock-trading models) by leveraging custom templated containers, binary heaps, and efficient streaming algorithms to minimize time complexity under heavy load.",
+      "Algorithmic Optimization & Intractable Problems: Implemented advanced optimization paradigms—including backtracking, branch-and-bound strategies, and dynamic programming—to compute optimal solutions for NP-hard challenges like the Traveling Salesperson Problem."],
   },
   {
     name: "EECS 370: Intro to Computer Organization",
     time: "Winter 2026", 
     grade: "A", 
     skills: "C, Assembly",
-    preview: "EECS 370 teaches how computers execute programs by bridging high-level code to low-level hardware, focusing on processor architecture, assembly language, and basic digital logic through design and simulation. Students build simple computers and simulators to understand the fundamental relationship between hardware and software. ",
+    preview: [ "Assembler & Linker Development: Engineered a robust two-pass C program to translate custom assembly language (LC-2K) into machine code, resolving symbolic addresses, handling relocation tables, and merging multiple object files into a unified executable.",
+      "Processor Architecture & Pipelined Simulation: Built a cycle-accurate behavioral simulator in C for a pipelined RISC processor, implementing advanced hardware optimization mechanisms including data forwarding and branch prediction to manage structural and data hazards.",
+      "Memory Hierarchy & Cache Optimization: Designed a configurable, set-associative cache simulator supporting write-back allocation policies and Least-Recently-Used (LRU) replacement, integrating it with the CPU simulator to analyze hit/miss performance and memory latency trade-offs."],
+  },
+    {
+    name: "DATASCI 101: Introduction to Datascience",
+    time: "Fall 2026", 
+    grade: "In Progress", 
+    skills: "Linux, Python + Libraries(MatPltLib, Pandas, etc), Ethical Hacking",
+    preview: ["Applied Data Wrangling & Analysis: Processed and analyzed real-world empirical datasets (including ecological and audio data) using Python to extract actionable insights and trends.",
+      "Statistical Modeling & Machine Learning: Trained predictive machine learning models to identify patterns, classify observations, and perform statistical inference on environmental and biological data.",
+      "Data Visualization & Programming: Developed clean data pipelines and visual representations (such as transforming audio signals and field metrics) to effectively communicate quantitative findings using programmatic tools."],
   },
   {
     name: "EECS 280: Data Structures and Algorithms",
     time: "Fall 2025", 
     grade: "A", 
     skills: "C++, Data Structures",
-    preview: "EECS 280 covers computer science fundamentals in C++. This class analyzes and implements foundational data structures such as Binary search trees, maps, and linked lists. In this class, projects I completed include a statistical analysis tool, an image processing program, a Euchre card game, a machine learning algorithm, and a text editor.",
+    preview: ["Object-Oriented Programming & Game Simulation: Developed an interactive, multi-player card game (Euchre) in C++ utilizing object-oriented principles, including custom classes, inheritance, polymorphism, and virtual functions to implement both human and automated AI players.",
+              "Machine Learning & Text Classification: Built a text classification system (using concepts like Naive Bayes/logistic reasoning on forum data) to automatically categorize document subjects, applying structured data processing and string manipulation in C++.",
+              "Memory Management & Custom Data Structures: Implemented dynamic memory models, deep copy semantics, and the \"Big Three\" destructor rules to construct pointer-based linear and non-linear data structures (such as Linked Lists and Binary Search Trees)."],
   },
   {
     name: "EECS 203: Discrete Mathematics",
     time: "Fall 2025", 
     grade: "A", 
     skills: "Logic & Proofs, Counting, Graph Theory",
-    preview: "Introduction to the mathematical foundations of computer science. In discrete mathematics, I learned about operations on 1s and 0s (logic), modular arithmetic and number theory, set theory, functions and relations on sets, graphs, counting, discrete probability theory, and how these form the foundational language through which we formulate and solve real-world problems in computer science.",
+    preview: ["Applied Formal Logic & Proofs: Leveraged propositional and predicate logic, set theory, and rigorous proof methods (induction, contradiction) to analyze algorithmic correctness and data structure invariants.",
+              "Algorithmic Complexity & Analysis: Evaluated function growth and asymptotic behaviors (Big-O notation) to optimize code performance and reason about computational scalability.",
+              "Discrete Structures & Combinatorics: Utilized graph theory, relations, permutations, and combinations to model complex network states, data relationships, and state-space enumeration problems."],
   }
 ];
 
@@ -70,13 +86,20 @@ let exp = [
     name: "Computer Consultant I",
     time: "Jan 2026 - Present",
     place: "University of Michigan - Ann Arbor",
-    preview: `Maintained school devices, performing routine checks and updating workflows; Collaborated to ensure proper handling of dorm and classroom equipment. Implemented basic troubleshooting, passing technical details to superiors as needed.`,
+    preview: [
+    'Designed and researched custom JavaScript-based Google Apps Script solutions to automate IT department workflows and organize internal data, mitigating manual entry and human error across 15+ master records.',
+    'Refactored legacy codebase and optimized algorithm efficiency, improving script execution speed by 50% and enhancing system reliability across departmental data pipelines.',
+    'Authored comprehensive developer documentation and sheet usage guides, establishing coding standards to accelerate codebase onboarding for future engineers.',
+    'Audited legacy workflows to identify operational bottlenecks, driving technical research into automated solutions and pitching actionable roadmap proposals to senior leadership.',
+    'Maintained and audited enterprise hardware/software assets across 80+ locations, minimizing downtime and preventing technology disruptions across 50,000+ end-users.',
+    'Facilitated technical interviews and paired with incoming engineers to deliver a frictionless onboarding journey, cultivating a highly collaborative team environment.']
   },
   {
     name: "High Tech Intership",
     time: "Aug 2024 - June 2025",
     place: "Walled Lake Western High School",
-    preview: `Updated software and maintained school devices such as printers, computers, and speakers: helped teachers transition to Windows 11, verified computers met software requirements for state testing, replaced and reconfigured printers at the school (etc).Provided technical support to staff and students for software and hardware issues like password recovery and document camera connection errors; Developed methods to quickly troubleshoot common issues.`,
+    preview: ['Updated software and maintained school devices such as printers, computers, and speakers: helped teachers transition to Windows 11, verified computers met software requirements for state testing, replaced and reconfigured printers at the school (etc).',
+              'Provided technical support to staff and students for software and hardware issues like password recovery and document camera connection errors; Developed methods to quickly troubleshoot common issues.']
   }
 ];
 
@@ -126,7 +149,8 @@ function changeSlides(key) {
       <a href="#clubs"  onClick={addClass} id="acl">Clubs</a>
       <a href="#course"  onClick={addClass} id="ac">Courses</a>
       <a href="#cert"   onClick={addClass} id="ace">Certificates</a>
-      <a href="/Portfolio/vidya_vuyyuru_resume.pdf" target="_blank" id="resume">View Resume</a>
+      <a href="https://github.com/404Found2" target="_blank">View Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      <a href="/Portfolio/vidya_vuyyuru_resume.pdf" target="_blank">View Resume <i class="fa-solid fa-link"></i></a>
       <div>
         <span className="el">React</span>
         <span className="el">HTML</span>
@@ -141,23 +165,33 @@ function changeSlides(key) {
       <h1 className="heading" id="about">About Me</h1>
       <div className="course longer">
             <h1>Hi! I'm Vidya!</h1>
-            <p>I’m a Computer Science major at the University of Michigan with a strong interest in web development. I enjoy building clean, user-focused applications and working across the full stack, from designing intuitive front ends to implementing reliable back-end systems. I’m always eager to learn new technologies and apply them to real-world problems. <br/><br /> Outside of coursework, I actively participate in hackathons, where I enjoy using technology to solve real-world problems. I’ve also spent significant time learning to code independently through online resources, tutorials, and personal projects, which has helped me continuously expand my skill set and stay up to date with modern web technologies.</p>
+            <p><b>About Me: </b>I am a Computer Science major at the University of Michigan with a deep passion for full-stack web development 
+              and user-centric software design. Driven by curiosity and a desire to build impactful digital solutions, I focus on creating 
+              clean, reliable, and scalable applications. My technical toolkit spans the entire development lifecycle, from architecting 
+              intuitive frontend interfaces to engineering robust, secure backend systems.<br></br>
+              I am eager to leverage my strong problem-solving foundation, adaptability, and modern web stack knowledge to help thw world around me.
+              I am looking for an opportunity to collaborate with experienced engineering teams, contribute to production-level codebase, and 
+              build software that delivers meaningful value to users.</p>
+              <p><b>Technical Growth & Innovation: </b>Beyond the classroom, I am a highly motivated self-starter who continuously pushes my 
+              technical boundaries. I have dedicated significant time to self-directed learning, mastering modern web technologies, libraries, 
+              and frameworks through independent projects and online tutorials. To test my skills under pressure, I actively compete in hackathons, 
+              where I collaborate with cross-functional teams to rapid-prototype software that solves real-world challenges.</p>
         </div>
     <h1 className="heading" id="exp">Experience</h1>
     <div className="flex">{exp.map((item) => <Job obj={item}/>)}</div>
-    <h1 className="heading" id="proj">Projects <a target="_blank" id="git" href="https://github.com/404Found2"> ➡</a></h1>
+    <a target="_blank" id="git" href="https://github.com/404Found2"><h1 className="heading" id="proj">Projects  <i class="fa-solid fa-link"></i></h1></a>
     <Project></Project>
     <Clubs />
     <h1 className="heading" id="course">Courses</h1>
     <div className="flex">
-      <Course  id="course1" obj={courses[(courseState * 3)]} item="class"/>
-      <Course  id="course2" obj={courses[(courseState * 3) + 1]} item="class"/>
-      <Course  id="course3" obj={courses[(courseState * 3) + 2] || "empty"} item="class"/>
+      <Course  id="course1" obj={courses[(courseState * 2)]} item="class"/>
+      <Course  id="course2" obj={courses[(courseState * 2) + 1] || "empty"} item="class"/>
     </div>
     <div className="CaroBar heading flex"> 
       <div  onClick={ changeSlides} className={courseState === 0 ? "caro-nav selected" : "caro-nav"}> 1 </div> 
       <div  onClick={ changeSlides} className={courseState === 1 ? "caro-nav selected" : "caro-nav"}> 2 </div> 
       <div  onClick={ changeSlides} className={courseState === 2 ? "caro-nav selected" : "caro-nav"}> 3 </div> 
+      <div  onClick={ changeSlides} className={courseState === 3 ? "caro-nav selected" : "caro-nav"}> 4 </div> 
     </div>
     <h1 className="heading" id="cert">Certificates</h1>
     <Cert/>
