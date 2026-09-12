@@ -83,7 +83,7 @@ let courses = [
 
 let exp = [
   {
-    name: "Computer Consultant I",
+    name: "Computer Consultant III",
     time: "Jan 2026 - Present",
     place: "University of Michigan - Ann Arbor",
     preview: [

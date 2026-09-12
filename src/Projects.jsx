@@ -21,7 +21,6 @@ var activities = [new Activity("/Portfolio/todo.png", "To-Do List", "This is a s
 export default function Project() {
     return (
     <div class="main">
-    <br></br>
     <div class="activity-flex" id="activity-list">
       {activities.map((it) => <a class="activity" style={{ 
         backgroundImage: `url(${it.url})`, 
